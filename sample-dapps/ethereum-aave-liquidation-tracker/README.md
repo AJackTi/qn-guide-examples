@@ -94,7 +94,6 @@ Quicknode Streams provide real-time blockchain data without running a node:
 
 - Monitors Aave V3 contracts for liquidation events
 - Filters and delivers only relevant events
-- Pay only for the filtered data
 - Ensures reliable data delivery with retry mechanisms
 - Zero infrastructure maintenance required
 
