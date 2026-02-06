@@ -45,9 +45,9 @@ HyperCore gRPC Stream
 
 ## Prerequisites
 
-- Node.js 18+
-- PostgreSQL DB
-- Quicknode HyperCore gRPC endpoint credentials
+- Node.js 20+ installed
+- A PostgreSQL instance, you can use a platform like [Aiven](https://aiven.io/) to spin up a hosted instance. We'll need this for `DATABASE_URL`.
+- [Quicknode account](https://www.quicknode.com/docs/hyperliquid/grpc-api?utm_source=qn-github&utm_campaign=hyperliquid_trading_dash) with Hypercore gRPC endpoint. We'll need this for `GRPC_ENDPOINT` and `AUTH_TOKEN`.
 
 ## Setup
 
