@@ -51,38 +51,37 @@ HyperCore gRPC Stream
 
 ## Setup
 
-### 1. Start PostgreSQL
+### 1. Clone and install
+
+```bash
+git clone https://github.com/quiknode-labs/hypercore-trading-dashboard.git
+cd hypercore-trading-dashboard
+npm install
+```
+
+### 2. Start PostgreSQL
 
 ```bash
 npm run db:up
 ```
 
-### 2. Configure Environment Variables
-
-Set these in your terminal (no .env file required):
+### 3. Configure environment
 
 ```bash
-# Database connection
-export DATABASE_URL="postgresql://user:password@localhost:5432/hypercore?schema=public"
-
-# Quicknode HyperCore credentials
+export DATABASE_URL="postgresql://postgres:postgres@localhost:5432/hypercore"
 export GRPC_ENDPOINT="your-endpoint.hype-mainnet.quiknode.pro:10000"
-export AUTH_TOKEN="your_token"
+export AUTH_TOKEN="your_quicknode_token"
 ```
 
-### 3. Install Dependencies
+> Note: Just paste these with values in two terminal windows. You'll need one window for the Next.js app and another for the database worker.
 
-```bash
-npm install
-```
-
-### 4. Initialize Database Schema
+### 4. Initialize database
 
 ```bash
 npm run db:push
 ```
 
-### 5. Start Data Ingestion (Terminal 1)
+### 5. Start the worker
 
 ```bash
 npm run worker
@@ -94,15 +93,21 @@ This starts the worker process that:
 - Stores raw trades and aggregated data in PostgreSQL
 - Tracks whale activity and liquidations
 
-### 6. Start Web Application (Terminal 2)
+You should see:
 
-> Note: configure environment variables in this terminal window too
+```bash
+Ping ok: { count: 1 }
+Ingester running
+WHALE_MIN_USD: 50000
+```
+
+### 6. Start the dashboard
 
 ```bash
 npm run dev
 ```
 
-Open http://localhost:3000 in your browser.
+Open [http://localhost:3000](http://localhost:3000)
 
 ## Available Scripts
 
