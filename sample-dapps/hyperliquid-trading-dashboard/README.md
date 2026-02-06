@@ -46,7 +46,7 @@ HyperCore gRPC Stream
 ## Prerequisites
 
 - Node.js 18+
-- Docker & Docker Compose (for PostgreSQL)
+- PostgreSQL DB
 - Quicknode HyperCore gRPC endpoint credentials
 
 ## Setup
@@ -95,6 +95,8 @@ This starts the worker process that:
 - Tracks whale activity and liquidations
 
 ### 6. Start Web Application (Terminal 2)
+
+> Note: configure environment variables in this terminal window too
 
 ```bash
 npm run dev
