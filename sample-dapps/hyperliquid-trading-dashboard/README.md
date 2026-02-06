@@ -56,7 +56,7 @@ HyperCore gRPC Stream
 ```bash
 git clone https://github.com/quiknode-labs/qn-guide-examples.git
 
-cd sample-dapps/hyperliquid-trading-dashboard
+cd qn-guide-examples/sample-dapps/hyperliquid-trading-dashboard
 
 npm install
 ```
