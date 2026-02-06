@@ -61,6 +61,8 @@ npm install
 
 ### 2. Start PostgreSQL
 
+If you are using a hosted PostgreSQL instance, skip this step.
+
 ```bash
 npm run db:up
 ```
